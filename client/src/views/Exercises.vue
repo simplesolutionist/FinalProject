@@ -86,6 +86,28 @@
       </v-card>
     </v-dialog>
   </v-row>
+  <div class="field has-addons">
+  <div class="control is-expanded">
+    <div class="select is-fullwidth">
+      <select name="exercise_types">
+        <option value="empty"></option>
+        <option value="pushup">Push-Up</option>
+        <option value="squat">Squat</option>
+        <option value="bicycle_manoeuvre">Bicycle Manoeuvre</option>
+        <option value="pullup">Pull-Up</option>
+        <option value="swiss_ball_hamstring_curl">Swiss Ball Hamstring Curl</option>
+        <option value="triceps_dips">Triceps Dips</option>
+        <option value="lunges">Lunges</option>
+        <option value="side_bridge">Side Bridge</option>
+        <option value="single_leg_squat">Single-Leg Squat</option>
+        <option value="lateral_shoulder_raise">Lateral Shoulder Raise</option>
+      </select>
+    </div>
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-primary">Choose</button>
+  </div>
+</div>
 </form>
 </template>
 

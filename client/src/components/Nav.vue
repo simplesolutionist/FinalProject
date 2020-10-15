@@ -51,9 +51,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
+          
+          <router-link to="/signup" class="button is-light">Signup</router-link>
         
            <router-link to="/login" class="button is-light">Login</router-link>
           
