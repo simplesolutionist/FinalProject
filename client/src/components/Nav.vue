@@ -17,10 +17,10 @@
       
         <router-link to="/" class="navbar-item">Home</router-link>
       <router-link to="/about" class="navbar-item">About</router-link>
-        <router-link to="/about" class="navbar-item">Exercises</router-link>
-        <router-link to="/about" class="navbar-item">Progress</router-link>
-      <router-link to="/about" class="navbar-item">Achievements</router-link>
-            <router-link to="/about" class="navbar-item">Friends</router-link>
+        <router-link to="/exercises" class="navbar-item">Exercises</router-link>
+        <router-link to="/progress" class="navbar-item">Progress</router-link>
+      <router-link to="/achievements" class="navbar-item">Achievements</router-link>
+            <router-link to="/friends" class="navbar-item">Friends</router-link>
 
 
 
