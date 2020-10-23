@@ -12,40 +12,28 @@
   </p>
   <a class="panel-block is-active">
     <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
     </span>
-    bulma
+    Sam
   </a>
   <a class="panel-block">
     <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
     </span>
-    marksheet
+    Lala
   </a>
   <a class="panel-block">
     <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
     </span>
-    minireset.css
+    Beth
   </a>
   <a class="panel-block">
     <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
     </span>
-    jgthms.github.io
-  </a>
-  <a class="panel-block">
-    <span class="panel-icon">
-      <i class="fas fa-code-branch" aria-hidden="true"></i>
-    </span>
-    daniellowtw/infboard
-  </a>
-  <a class="panel-block">
-    <span class="panel-icon">
-      <i class="fas fa-code-branch" aria-hidden="true"></i>
-    </span>
-    mojs
-  </a>
+Max  </a>
+  
   
   <div class="panel-block">
     <button class="button is-link is-outlined is-fullwidth">

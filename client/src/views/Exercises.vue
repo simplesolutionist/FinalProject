@@ -108,6 +108,86 @@
     <button type="submit" class="button is-primary">Choose</button>
   </div>
 </div>
+<div class="field">
+  <label class="label">Monday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Tuesday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Wednesday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Thursday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Friday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Saturday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Sunday</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+
+
+
+
+
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox">
+      I completed the exercises and gave it my all
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control">
+    <label class="radio">
+      <input type="radio" name="question">
+      Ahead of Schedule
+    </label>
+    <label class="radio">
+      <input type="radio" name="question">
+      On Track
+    </label>
+    <label class="radio">
+      <input type="radio" name="question">
+      Feeling Behind
+    </label>
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link">Add to Log</button>
+  </div>
+ 
+</div>
 </form>
 </template>
 
