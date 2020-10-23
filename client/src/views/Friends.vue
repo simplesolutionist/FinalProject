@@ -1,6 +1,10 @@
 <template>
 <form>
-<div class="field is-grouped">
+  <div class="page">
+
+<div class="columns">
+  <div class="column is-two-thirds">
+  <div class="field is-grouped">
   <p class="control is-expanded">
     <input class="input" type="text" placeholder="Look up your friends">
   </p>
@@ -10,12 +14,24 @@
     </a>
   </p>
 </div>
-</form>
+</div>
+  <div class="column is-one-third">
+<Sidebar />
+  </div>
+  </div>
+    </div>
+
+  </form>
+
 </template>
 
 <script>
+    import Sidebar from "@/components/Sidebar";
+
 export default {
-    
+  components: {
+    Sidebar
+  }
 }
 </script>
 
