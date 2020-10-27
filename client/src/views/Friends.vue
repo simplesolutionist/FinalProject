@@ -14,7 +14,12 @@
     </a>
   </p>
 </div>
+ <figure>
+   <img src="https://i.pinimg.com/originals/fb/03/e7/fb03e78deea259c7e1ab712493e269c6.gif" width="870" height="870">
+   </figure>
 </div>
+<br>
+ 
   <div class="column is-one-third">
 <Sidebar />
   </div>

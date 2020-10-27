@@ -1,8 +1,6 @@
 <template>
-<form>
-  <div class="achievements">
-    <h1>Share your results with friends</h1>
-  </div>
+<form> 
+  <br>
    <table class="table">
   <thead>
     <tr>
@@ -29,7 +27,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>No</td>
       <td></td>
       <td></td>
       <td>Winner</td>
@@ -42,7 +40,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>Yes</td>
       <td></td>
       <td></td>
       <td>Significant Results</td>
@@ -55,14 +53,14 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>Yes</td>
       <td></td>
       <td></td>
       <td>Massive improvement</td>
     </tr>
     <tr class="is-selected">
       <th>4</th>
-      <td><a href="https://en.wikipedia.org/wiki/Manchester_City_F.C." title="X Profile Pic"></a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Manchester_City_F.C." title="X Profile Pic">Lala</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -75,7 +73,7 @@
     </tr>
     <tr>
       <th>5</th>
-      <td><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." title="X Profile Pic"></a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." title="X Profile Pic">Beth</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -205,7 +203,7 @@
     </tr>
     <tr>
       <th>15</th>
-      <td><a href="https://en.wikipedia.org/wiki/Crystal_Palace_F.C." title="X Profile Pic"></a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Crystal_Palace_F.C." title="X Profile Pic">Joel</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -218,7 +216,7 @@
     </tr>
     <tr>
       <th>16</th>
-      <td><a href="https://en.wikipedia.org/wiki/A.F.C._Bournemouth" title="X Profile Pic"></a></td>
+      <td><a href="https://en.wikipedia.org/wiki/A.F.C._Bournemouth" title="X Profile Pic">Chris</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -244,28 +242,28 @@
     </tr>
     <tr>
       <th>18</th>
-      <td><a href="https://en.wikipedia.org/wiki/Newcastle_United_F.C." title="X Profile Pic">Y</a> <strong>(DQ)</strong>
+      <td><a href="https://en.wikipedia.org/wiki/Newcastle_United_F.C." title="X Profile Pic">Dwayne</a> <strong>(DQ)</strong>
       </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>No</td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <th>19</th>
-      <td><a href="https://en.wikipedia.org/wiki/Norwich_City_F.C." title="X Profile Pic">Z</a> <strong>(DQ)</strong>
+      <td><a href="https://en.wikipedia.org/wiki/Norwich_City_F.C." title="X Profile Pic">AJ</a> <strong>(DQ)</strong>
       </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>Yes</td>
       <td></td>
       <td></td>
       <td></td></tr>
@@ -278,14 +276,23 @@
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>Yes</td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
   </tbody>
 </table>
-
+<br>
+ <div class="achievements">
+    <h1><br>BADGES UNLOCKED</h1><br>
+  </div>
+    <figure>
+  <img src=https://pbs.twimg.com/media/DOXMytiVwAAU7AW.jpg width="300" height ="300" class="center">
+ 
+  <img src="https://cdn.dribbble.com/users/2815687/screenshots/5579636/action1.gif" width="300" height="300">
+  </figure>
+  
 </form>
 </template>
 
@@ -293,4 +300,5 @@
     form{
         margin-top: 30px;
     }
+ 
 </style>
