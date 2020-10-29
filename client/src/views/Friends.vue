@@ -21,7 +21,7 @@
 <br>
  
   <div class="column is-one-third">
-<Sidebar />
+<FriendList />
   </div>
   </div>
     </div>
@@ -31,11 +31,11 @@
 </template>
 
 <script>
-    import Sidebar from "@/components/Sidebar";
+    import FriendList from "@/components/FriendList";
 
 export default {
   components: {
-    Sidebar
+    FriendList
   }
 }
 </script>
