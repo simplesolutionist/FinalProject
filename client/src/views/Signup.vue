@@ -55,18 +55,28 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link">Submit</button>
-  </div>
-  <div class="control">
-    <button class="button is-link is-light">Cancel</button>
-  </div>
+<button class="button is-success" @click.prevent="signup">
+            Signup
+            </button>  </div>
+  
 </div>
 </form>
 </template>
 
 <script>
+import session from "@/models/session";
 export default {
-    
+    methods: {
+        signup(){
+            session.user = {
+                name: 'Ayman Ali',
+                handle: 'simplesolutionist',
+                profile: 'https://pbs.twimg.com/profile_images/1318718659808854018/DVBHPU4q_400x400.jpg'
+            }
+            session.addNotification('Yay! You signed in', 'success')
+            this.$router.push('home')
+        }
+    }
 }
 </script>
 
