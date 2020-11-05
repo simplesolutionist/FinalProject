@@ -5,14 +5,14 @@
       <img src="../assets/logo.png" height="28">
     </a>
 
-    <a role="button" class="navbar-burger burger" :class="{ 'is-Active': isActive}" @click="isActive= !isActive" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" :class="{ 'is-active': isActive}" @click='isActive= !isActive' aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-Active': isActive}">
+  <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isActive}">
     <div class="navbar-start">
       
         <router-link to="/" class="navbar-item">Home</router-link>

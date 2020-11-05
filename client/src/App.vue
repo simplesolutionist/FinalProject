@@ -1,5 +1,5 @@
 <template>
-  <section class>
+  <section class="section">
     <div class="container">
       <Nav />
 
@@ -15,7 +15,7 @@
 import Nav from "@/components/Nav";
 export default {
   components: {
-   Nav,
+   Nav
   }
 }
 </script>
