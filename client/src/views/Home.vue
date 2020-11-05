@@ -1,23 +1,21 @@
-
 <template>
-<form>
   <div>
-    <transition-group name='fade' tag='div'>
-      <div v-for="i in [currentIndex]" :key='i'>
+    <transition-group name="fade" tag="div">
+      <div v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
+    <transition name="slide-fade"></transition>
     </transition-group>
-    <a class="prev" @click="prev" href='#'>&#10094;</a>
-  <a class="next" @click="next" href='#'>&#10095;</a>
-  </div>
+    <a class="prev" @click="prev" href="#">&#10094; Previous</a>
+    <a class="next" @click="next" href="#">&#10095; Next</a>
+    <center><button class="button is-info is-rounded">Get Started</button></center>
 
- 
-  </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: "Slider",
   data() {
     return {
       images: [
@@ -28,84 +26,64 @@ export default {
         'https://images.pexels.com/photos/378442/pexels-photo-378442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         'https://images.pexels.com/photos/3766209/pexels-photo-3766209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         'https://images.pexels.com/photos/2150109/pexels-photo-2150109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-        ],
+      ],
       timer: null,
-      currentIndex: 0,
+      currentIndex: 0
+    };
+  },
+
+  mounted: function() {
+    this.startSlide();
+  },
+
+  methods: {
+    startSlide: function() {
+      this.timer = setInterval(this.next, 5500);
+    },
+
+    next: function() {
+      this.currentIndex += 1;
+    },
+    prev: function() {
+      this.currentIndex -= 1;
     }
   },
-  
-    mounted: function() {
-      this.startSlide();
-    },
-  
-    methods: {
-      startSlide: function() {
-        this.timer = setInterval(this.next, 4000);
-      },
-  
-  
-      next: function() {
-        this.currentIndex += 1
-      },
-      prev: function() {
-        this.currentIndex -= 1
-      }
-    },
-  
-    computed: {
-      currentImg: function() {
-        return this.images[Math.abs(this.currentIndex) % this.images.length];
-      }
+
+  computed: {
+    currentImg: function() {
+      return this.images[Math.abs(this.currentIndex) % this.images.length];
     }
-  
-}
+  }
+};
 </script>
 
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.9s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width:100%;
-  opacity: 1;
-}
-.fade-enter,
-.fade-leave-to {
-  visibility: hidden;
-  width:100%;
-  opacity: 0;
-}
+    #Slider{
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    animation: 
+    animate 20s ease-in-out infinite;
+    
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
 }
-/* Position the "next button" to the right */
-.next {
-  right: 0;
+    .slide-fade-enter-active {
+    transition: all 2s ease;
 }
-.prev {
-  left: 0;
+    .slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.9);
+    .slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(30px);
+    opacity: 0;
 }
-</style>
-
-<style>
     form{
         margin-top: 30px;
     }
