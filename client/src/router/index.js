@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import session from '../models/session'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
+import { User } from "../models/session"
 
 Vue.use(VueRouter)
 
