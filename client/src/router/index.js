@@ -4,8 +4,7 @@ import Home from '../views/Home.vue'
 import session from '../models/session'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
-import { User } from "../models/session"
-
+import Users from '../views/Users.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,11 +19,18 @@ const routes = [
     name: 'Login',
     component: Login
   },
+
   {
     path: '/signup',
     name: 'Signup',
     component: Signup
   },
+  {
+    path: '/users',
+    name: 'Users',
+    component: Users
+  },
+ 
   {
     path: '/about',
     name: 'About',

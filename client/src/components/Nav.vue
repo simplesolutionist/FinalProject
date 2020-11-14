@@ -46,7 +46,14 @@
           </a>
         </div>
       </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">Admin</a>
+    
+      <div class="navbar-dropdown">
+        <router-link to="/users" class="navbar-item">Users</router-link>
+      </div>
     </div>
+  </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
@@ -80,3 +87,5 @@ export default {
 <style>
 
 </style>
+
+
