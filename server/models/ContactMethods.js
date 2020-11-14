@@ -24,15 +24,15 @@ async function getTypes(){
     return await mysql.query(`SELECT id, Name FROM Types WHERE Type_id = 4`);
 }
 
-async function add(Type, Value, IsPrimary = 0, CanSpam = 1, User_id){
+async function add(Type, Value, IsPrimary = 0, CanSpam = 1, User_id, Users_id){
     const sql = `INSERT INTO ContactMethods (created_at, Type, Value, IsPrimary, CanSpam, User_id) VALUES ? ;`;
-    const params = [[new Date(), Type, Value, IsPrimary, CanSpam, User_id]];
+    const params = [[new Date(), Type, Value, IsPrimary, CanSpam, User_id, Users_id]];
     return await mysql.query(sql, [params]);
 }
 
-async function update(id, Type, Value, IsPrimary, CanSpam, User_id){
+async function update(id, Type, Value, IsPrimary, CanSpam, User_id, Users_id){
     const sql = `UPDATE ContactMethods SET ? WHERE id = ?;`;
-    const params = { Type, Value, IsPrimary, CanSpam, User_id };
+    const params = { Type, Value, IsPrimary, CanSpam, User_id, Users_id };
     return await mysql.query(sql, [params, id]);
 }
 

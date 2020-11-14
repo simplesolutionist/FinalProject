@@ -91,16 +91,17 @@
     <div class="select is-fullwidth">
       <select name="exercise_types">
         <option value="empty"></option>
-        <option value="pushup">Push-Up</option>
-        <option value="squat">Squat</option>
-        <option value="bicycle_manoeuvre">Bicycle Manoeuvre</option>
-        <option value="pullup">Pull-Up</option>
-        <option value="swiss_ball_hamstring_curl">Swiss Ball Hamstring Curl</option>
-        <option value="triceps_dips">Triceps Dips</option>
-        <option value="lunges">Lunges</option>
-        <option value="side_bridge">Side Bridge</option>
-        <option value="single_leg_squat">Single-Leg Squat</option>
-        <option value="lateral_shoulder_raise">Lateral Shoulder Raise</option>
+        <option value="Pushups">Pushups</option>
+        <option value="Running">Running</option>
+        <option value="Squats">Squats</option>
+        <option value="Bicycle_Manoeuvre">Bicycle Manoeuvre</option>
+        <option value="Pullups">Pullups</option>
+        <option value="Swiss_Ball_Hamstring_Curl">Swiss Ball Hamstring Curl</option>
+        <option value="Tricep_Dips">Tricep Dips</option>
+        <option value="Lunges">Lunges</option>
+        <option value="Side_Bridges">Side Bridges</option>
+        <option value="Single_Leg_Squats">Single-Leg Squats</option>
+        <option value="Lateral_Shoulder_Raises">Lateral Shoulder Raises</option>
       </select>
     </div>
   </div>
