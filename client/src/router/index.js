@@ -45,7 +45,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Exercises.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Exercises.vue'),
+    beforeEnter: checkSessionUser
   },
   {
     path: '/progress',
@@ -80,3 +81,11 @@ const router = new VueRouter({
 })
 
 export default router
+
+function checkSessionUser (to, from, next) {
+  if(session.user){
+    next();
+  }else{
+    next('Login');
+  }
+}

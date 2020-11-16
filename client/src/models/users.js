@@ -1,1 +1,8 @@
-export const list = [{"id":1,"created_at":"2020-10-29T00:34:58.000Z","update_at":"2020-10-29T00:34:58.000Z","FirstName":"Ayman","LastName":"Ali","DOB":null,"User_Type":5},{"id":2,"created_at":"2020-10-29T00:34:58.000Z","update_at":"2020-10-29T00:34:58.000Z","FirstName":"Lala","LastName":"Rose","DOB":null,"User_Type":6},{"id":3,"created_at":"2020-10-29T14:01:20.000Z","update_at":"2020-10-29T14:01:20.000Z","FirstName":"Chris","LastName":"Winters","DOB":"2020-08-05T21:18:54.000Z","User_Type":6},{"id":4,"created_at":"2020-10-29T15:45:11.000Z","update_at":"2020-10-29T14:45:28.000Z","FirstName":"Wiley","LastName":"Jackson","DOB":"2020-05-12T21:20:36.000Z","User_Type":6}]
+
+
+
+
+import { myFetch } from "./my-fetch";
+export function getList(){
+    return myFetch('http://localhost:3001/users');
+}

@@ -1,18 +1,18 @@
 const express = require('express');
-const { Users } = require('../models/Users');
+const users = require('../models/Users');
 
-const app = express.Router();
-
+const router = express.Router();
+router
 // add friend
-app.post('/add', (req, res) => {
-    Users.Add_Friend(req.body.user1, req.body.user2);
+.post('/add', (req, res) => {
+    users.Add_Friend(req.body.user1, req.body.user2, req.body.user3, req.body.user4);
     res.send({success: true});       
-});
+})
 
 // delete friend
-app.post('/delete', (req, res) => {
-    Users.Delete_Friend(req.body.user1, req.body.user2);
+.post('/delete', (req, res) => {
+    users.Delete_Friend(req.body.user1, req.body.user2, req.body.user3, req.body.user4);
     res.send({success: true}); 
 });
 
-module.exports = app;
+module.exports = router;
