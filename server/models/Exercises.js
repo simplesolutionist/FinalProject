@@ -48,6 +48,6 @@ async function remove(id){
 
 const search = async q => await mysql.query(`SELECT id, Value FROM Exercise WHERE Value LIKE ?; `, [`%${q}%`]);
 
-module.exports = { getAll, get, exists, add, update, remove, getTypes, search, Types }
+module.exports = { getAll, get, exists, add, update, remove, getTypes, search, Types}
 
 

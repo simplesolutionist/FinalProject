@@ -3,6 +3,13 @@ const path = require('path');
 require('dotenv').config();
 
 const users = require('./controllers/users');
+const exercises = require('./controllers/Exercises');
+const comments = require('./controllers/comments');
+const reactions = require('./controllers/reactions');
+const followers = require('./controllers/followers');
+const friends = require('./controllers/Friends');
+const userexercises = require('./controllers/UserExercises');
+
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -12,12 +19,6 @@ console.log(process.env.BEST_CLASS);
 //  Middleware
 app.use(express.json());
 app.use(express.static( __dirname + '/../docs/'))
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
 
 //  Authentication
 app.use(function(req, res, next) {
@@ -34,6 +35,13 @@ app.get('/hello', (req, res, next) => {
 })
 
 app.use('/users', users);
+app.use('/Exercises', exercises);
+app.use('/comments', comments);
+app.use('/reactions', reactions);
+app.use('/followers', followers);
+app.use('/Friends', friends);
+app.use('/UserExercises', userexercises);
+
 
 app.get('*', (req, res, next) => {
     const filename = path.join(__dirname, '/../docs/index.html');

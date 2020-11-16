@@ -1,5 +1,7 @@
 const express = require('express');
-const users = require('../models/Exercises');
+const exercises = require('../models/Exercises');
+const comments = require('../models/comments');
+const reactions = require('../models/reactions');
 
 const router = express.Router();
 
@@ -20,6 +22,18 @@ router
     })
     .get('/search', (req, res, next) => {
         exercises.search(req.query.q).then(x=> res.send( x ) )
+        .catch(next);
+    })
+    .get('/:id/comments', (req, res, next) => {
+        const id = +req.params.id;
+        if(!id) return next();
+        comments.getForExercise(id).then(x=> res.send( x ) )
+        .catch(next);
+    })
+    .get('/:id/reactions', (req, res, next) => {
+        const id = +req.params.id;
+        if(!id) return next();
+        reactions.getForExercise(id).then(x=> res.send( x ) )
         .catch(next);
     })
     .post('/', (req, res, next) => {

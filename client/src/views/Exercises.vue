@@ -153,10 +153,26 @@
   </div>
 </div>
 
-
-
-
-
+<br>
+<h1><strong>React to An Exercise</strong></h1>
+<div class="field has-addons ">
+  <p class="control">
+    <span class="select">
+      <select>
+        <option></option>
+        <option>👍</option>
+        <option>❤️</option>
+      </select>
+    </span>
+  </p>
+  
+  <p class="control">
+    <a class="button is-primary">
+      React
+    </a>
+  </p>
+</div>
+<br>
 <div class="field">
   <div class="control">
     <label class="checkbox">
@@ -182,7 +198,7 @@
     </label>
   </div>
 </div>
-
+<br>
 <div class="field is-grouped">
   <div class="control">
     <button class="button is-link">Add to Log</button>
