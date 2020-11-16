@@ -32,10 +32,10 @@ router
         }).catch(next)
     })
    .put('/:id', (req, res, next) => {
-        users.update( req.params.id,
+        followers.update( req.params.id,
             req.body.User_id,
             req.body.follower_id, 
-            users.Types.USER, 
+            followers.Types.USER, 
         ).then(newUser => {
             res.send( newUser );
         }).catch(next)

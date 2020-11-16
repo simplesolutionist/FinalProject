@@ -8,7 +8,7 @@ const comments = require('./controllers/comments');
 const reactions = require('./controllers/reactions');
 const followers = require('./controllers/followers');
 const friends = require('./controllers/Friends');
-const userexercises = require('./controllers/UserExercises');
+const adminexercises = require('./controllers/AdminExercises');
 
 
 const app = express()
@@ -40,7 +40,7 @@ app.use('/comments', comments);
 app.use('/reactions', reactions);
 app.use('/followers', followers);
 app.use('/Friends', friends);
-app.use('/UserExercises', userexercises);
+app.use('/AdminExercises', adminexercises);
 
 
 app.get('*', (req, res, next) => {
