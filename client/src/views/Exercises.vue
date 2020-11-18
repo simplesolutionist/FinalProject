@@ -16,74 +16,6 @@
           Exercise Selector
         </v-btn>
       </template>
-      <v-card>
-        <v-card-title>Select Exercises for Today</v-card-title>
-        <v-divider></v-divider>
-        <v-card-text style="height: 300px;">
-          <v-radio-group
-            v-model="dialogm1"
-            column
-          >
-            <v-radio
-              label="Lunges"
-              value="lunges"
-            ></v-radio>
-            <v-radio
-              label="Pushups"
-              value="pushups"
-            ></v-radio>
-            <v-radio
-              label="Squats"
-              value="squats"
-            ></v-radio>
-            <v-radio
-              label="Standing overhead dumbbell presses"
-              value="standing-overhead-dumbbell-presses"
-            ></v-radio>
-            <v-radio
-              label="Dumbbell rows"
-              value="dumbell-rows"
-            ></v-radio>
-            <v-radio
-              label="Single-leg deadlifts"
-              value="single-leg-deadlifts"
-            ></v-radio>
-            <v-radio
-              label="Burpees"
-              value="burpees"
-            ></v-radio>
-            <v-radio
-              label="Side planks"
-              value="side-planks"
-            ></v-radio>
-            <v-radio
-              label="Planks"
-              value="planks"
-            ></v-radio>
-            <v-radio
-              label="Glute bridge"
-              value="glute-bridge"
-            ></v-radio>
-          </v-radio-group>
-        </v-card-text>
-        <v-divider></v-divider>
-        <v-card-actions>
-          <v-btn
-            color="blue darken-1"
-            text
-            @click="dialog = false"
-          >
-            Close
-          </v-btn>
-          <v-btn
-            color="blue darken-1"
-            text
-            @click="dialog = false"
-          >
-            Save
-          </v-btn>
-        </v-card-actions>
-      </v-card>
     </v-dialog>
   </v-row>
   <div class="field has-addons">
@@ -109,52 +41,135 @@
     <button type="submit" class="button is-primary">Choose</button>
   </div>
 </div>
-<div class="field">
-  <label class="label">Monday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Tuesday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Wednesday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Thursday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Friday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Saturday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Sunday</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
-
 <br>
-<h1><strong>React to An Exercise</strong></h1>
+<v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      scrollable
+      max-width="300px"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Exercise Day
+        </v-btn>
+      </template>
+    </v-dialog>
+  </v-row>
+  <div class="field has-addons">
+  <div class="control is-expanded">
+    <div class="select is-fullwidth">
+      <select name="exercise_types">
+        <option value="empty"></option>
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+      </select>
+    </div>
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-primary">Choose</button>
+  </div>
+</div>
+<br>
+<v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      scrollable
+      max-width="300px"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Exercise Date
+        </v-btn>
+      </template>
+    </v-dialog>
+  </v-row>
+<v-row>
+    <v-col>
+      <v-sheet height="400">
+        <v-calendar
+          ref="calendar"
+          :now="today"
+          :value="today"
+          :events="events"
+          color="primary"
+          type="week"
+        ></v-calendar>
+      </v-sheet>
+    </v-col>
+  </v-row>
+  <br>
+  <v-row justify="center">
+    <v-dialog
+      v-model="dialog"
+      scrollable
+      max-width="300px"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Exercise Location
+        </v-btn>
+      </template>
+    </v-dialog>
+  </v-row>
+  <div class="field has-addons">
+  <div class="control is-expanded">
+    <div class="select is-fullwidth">
+      <select name="exercise_types">
+        <option value="empty"></option>
+        <option value="Gym">Gym</option>
+        <option value="Park">Park</option>
+        <option value="Home">Home</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-primary">Choose</button>
+  </div>
+</div>
+  <br>
+  <div class="field">
+  <label class="label">Exercise Intensity</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g Moderate Intensity">
+  </div>
+</div>
+<br>
+<div class="field">
+  <label class="label">Exercise Heartrate</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="e.g. 190bpm">
+  </div>
+</div>
+<br>
+<div class="field">
+  <label class="label">Exercise Duration</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="e.g. 20 minutes">
+  </div>
+</div>
+<br>
+<h1><strong>Rate Your Exercise Experience</strong></h1>
 <div class="field has-addons ">
   <p class="control">
     <span class="select">
@@ -165,7 +180,9 @@
       </select>
     </span>
   </p>
-  
+  <p class="control">
+    <input class="input" type="text" placeholder="Add a comment">
+  </p>
   <p class="control">
     <a class="button is-primary">
       React
@@ -209,13 +226,19 @@
 </template>
 
 <script>
+import session from "@/models/session";
+import {getExercises} from "@/models/Exercises";
   export default {
     data () {
       return {
         dialogm1: '',
         dialog: false,
+        Exercises: []
       }
     },
+    async created(){
+      this.Exercises = await getExercises();
+    }
   }
 </script>
 

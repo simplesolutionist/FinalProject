@@ -8,8 +8,6 @@ const comments = require('./controllers/comments');
 const reactions = require('./controllers/reactions');
 const followers = require('./controllers/followers');
 const friends = require('./controllers/Friends');
-const adminexercises = require('./controllers/AdminExercises');
-
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -40,8 +38,6 @@ app.use('/comments', comments);
 app.use('/reactions', reactions);
 app.use('/followers', followers);
 app.use('/Friends', friends);
-app.use('/AdminExercises', adminexercises);
-
 
 app.get('*', (req, res, next) => {
     const filename = path.join(__dirname, '/../docs/index.html');
@@ -53,8 +49,6 @@ app.use( (err, req, res, next) =>{
     console.log(err);
     res.status(err.status || 500).send( { message: err.message } )
 } )
-
-
 
 //  Init
 app.listen(port, () => {

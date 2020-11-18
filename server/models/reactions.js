@@ -47,6 +47,6 @@ async function remove(id){
     return await mysql.query(sql, [id]);
 }
 
-const search = async q => await mysql.query(`SELECT id, Text, Post_id FROM Reactions WHERE Text LIKE ? ; `, [`%${q}%`]);
+const search = async q => await mysql.query(`SELECT id, Text, Exercise_id FROM Reactions WHERE Text LIKE ? ; `, [`%${q}%`]);
 
 module.exports = { getAll, get, add, update, remove, search, getForExercise }

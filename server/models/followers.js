@@ -20,7 +20,7 @@ async function get(id){
     return rows[0];
 }
 
-async function add(User_id, follower_id){
+async function add(Text, User_id, follower_id){
     const sql = `INSERT INTO Comments (created_at, User_id, follower_id) VALUES ? ;`;
     const params = [[new Date(), Text, User_id, follower_id]];
     const res = await mysql.query(sql, [params]);

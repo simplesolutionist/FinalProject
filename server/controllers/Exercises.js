@@ -7,21 +7,13 @@ const router = express.Router();
 
 router
     .get('/', (req, res, next) => {
-        exercises.getAll().then(x=> res.send( x.map(exercise=> ({ ...exercise, Exercise: undefined}) ) ) )
+        exercises.getAll().then(x=> res.send( x ) )
         .catch(next);
     })
     .get('/:id', (req, res, next) => {
         const id = +req.params.id;
         if(!id) return next();
         exercises.get(id).then(x=> res.send( x ) )
-        .catch(next);
-    })
-    .get('/types', (req, res, next) => {
-        exercises.getTypes().then(x=> res.send( x ) )
-        .catch(next);
-    })
-    .get('/search', (req, res, next) => {
-        exercises.search(req.query.q).then(x=> res.send( x ) )
         .catch(next);
     })
     .get('/:id/comments', (req, res, next) => {
@@ -34,6 +26,14 @@ router
         const id = +req.params.id;
         if(!id) return next();
         reactions.getForExercise(id).then(x=> res.send( x ) )
+        .catch(next);
+    })
+    .get('/types', (req, res, next) => {
+        exercises.getTypes().then(x=> res.send( x ) )
+        .catch(next);
+    })
+    .get('/search', (req, res, next) => {
+        exercises.search(req.query.q).then(x=> res.send( x ) )
         .catch(next);
     })
     .post('/', (req, res, next) => {

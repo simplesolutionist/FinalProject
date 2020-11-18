@@ -2,7 +2,31 @@
   <template>
   
   <div class="page">
-      <h2 class="title is-2">Users Page</h2>
+      <h2 class="title is-2">Manage Users</h2>
+      <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Admin Functionalities
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+ 
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Add User</a>
+    <a href="#" class="card-footer-item">Edit User</a>
+    <a href="#" class="card-footer-item">Delete User</a>
+  </footer>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Add Exercise</a>
+    <a href="#" class="card-footer-item">Edit Exercise</a>
+    <a href="#" class="card-footer-item">Delete Exercise</a>
+  </footer>
+</div>
+<br>
 
         <table class="table is-narrow is-hoverable is-fullwidth">
             <thead><tr>

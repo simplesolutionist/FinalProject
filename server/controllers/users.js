@@ -1,5 +1,7 @@
 const express = require('express');
 const users = require('../models/users');
+const followers = require('../models/followers');
+const following = require('../models/following');
 
 const router = express.Router();
 
@@ -63,6 +65,18 @@ router
         ).then(newUser => {
             res.send( newUser );
         }).catch(next)
+    })
+    .get('/:id/followers', (req, res, next) => {
+        const id = +req.params.id;
+        if(!id) return next();
+        followers.getForExercise(id).then(x=> res.send( x ) )
+        .catch(next);
+    })
+    .get('/:id/following', (req, res, next) => {
+        const id = +req.params.id;
+        if(!id) return next();
+        following.getForExercise(id).then(x=> res.send( x ) )
+        .catch(next);
     })
     .delete('/:id', (req, res, next) => {
         users.remove(req.params.id).then(msg => {

@@ -10,7 +10,7 @@ async function getAll(){
 
 async function get(id){
     const rows = await mysql.query(`SELECT * FROM Exercise WHERE id=?`, [id]);
-    if(!rows.length) throw { status: 404, message: "Sorry, there is no such user" };
+    if(!rows.length) throw { status: 404, message: "Sorry, there is no such exercise" };
     return rows[0];
 }
 

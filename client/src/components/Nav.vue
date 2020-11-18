@@ -31,18 +31,36 @@
         </a>
 
         <div class="navbar-dropdown">
+          
           <a class="navbar-item">
+                 <v-icon
+      small
+      color="teal darken-2"
+    >
+      mdi-email
+    </v-icon>
             Contact
+            
+          </a>
+       
+        <a class="navbar-item">
+              <v-icon small>fas fa-edit</v-icon>
+  Newsletter
           </a>
           <a class="navbar-item">
-            Newsletter
-          </a>
-          <a class="navbar-item">
-            Settings
+              <v-icon small>fas fa-lock</v-icon>
+  Settings
           </a>
           <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
+           <a class="navbar-item">
+                 <v-icon
+      small
+      color="teal darken-2"
+    >
+      mdi-account
+    </v-icon>
+          Report An Issue
+            
           </a>
         </div>
       </div>

@@ -4,10 +4,10 @@ const followers = require('../models/followers');
 const router = express.Router();
 
 router
-    .get('/', (req, res, next) => {
-        followers.getAll().then(x=> res.send( x.map(user=> ({ ...follower, Password: undefined}) ) ) )
-        .catch(next);
-    })
+.get('/', (req, res, next) => {
+    followers.getAll().then(x=> res.send( x ) ) 
+    .catch(next);
+})
     .get('/:id', (req, res, next) => {
         const id = +req.params.id;
         if(!id) return next();

@@ -1,5 +1,36 @@
 <template>
 <form>
+  <nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Users</p>
+      <p class="title">3,456</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Following</p>
+      <p class="title">123</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="title">Gravity Gym</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Followers</p>
+      <p class="title">456K</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Likes</p>
+      <p class="title">789</p>
+    </div>
+  </div>
+</nav>
   <figure >
   <img src=https://i.pinimg.com/originals/9b/42/30/9b42304651ee57257d0f8a2d6fb49948.jpg>
   </figure>
