@@ -1,0 +1,21 @@
+@media screen and (max-width:450px) {
+    .min-width-100 {
+      min-width: 100px;
+    }
+  
+    .search {
+      &-parent {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+  
+        div {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  

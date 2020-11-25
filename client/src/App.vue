@@ -1,4 +1,6 @@
 <template>
+  <div id="app">
+
   <section class="section">
     <div class="container">
       <Nav />
@@ -8,7 +10,7 @@
     </div>
      
   </section>
-
+</div>
 </template>
 
 <script>
@@ -22,6 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "./styles/style.scss";
 
 </style>
+
 

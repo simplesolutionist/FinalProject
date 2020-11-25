@@ -1,0 +1,21 @@
+@import 'variables';
+
+.pad-5-hor {
+    padding: 0px 5px;
+}
+
+.pad-5-ver {
+    padding: 5px 0px;
+}
+
+.green {
+    color: $color-green;
+}
+
+.max-width-80 {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    text-align: right;
+}

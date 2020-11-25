@@ -8,15 +8,16 @@
     </transition-group>
     <a class="prev" @click="prev" href="#">&#10094; Previous</a>&nbsp;&nbsp;
     <a class="next" style = "margin:5px;" @click="next" href="#">&#10095; Next</a>
-    <center><button class="button is-info is-rounded">Get Started</button></center>
+    <center><router-link to="/signup">
+    <button class="button is-info is-rounded">Get Started</button></router-link></center>
    
     <br><br><br><br>
     <section id="section-a">
     <p>Online Store</p><br>
-        <img src="https://image.flaticon.com/icons/png/512/1021/1021745.png" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://image.flaticon.com/icons/png/512/1021/1021747.png" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://www.soba-store.com/wp-content/uploads/2018/05/roupas.jpg" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://cdn1.iconfinder.com/data/icons/fitness/500/Shoes_soccer_sport_fitness-512.png" alt="Flowers in Chania" width="60" height="45">
+        <img src="https://image.flaticon.com/icons/png/512/1021/1021745.png" alt="outfit1" width="60" height="45">
+        <img src="https://image.flaticon.com/icons/png/512/1021/1021747.png" alt="outfit2" width="60" height="45">
+        <img src="https://www.soba-store.com/wp-content/uploads/2018/05/roupas.jpg" alt="shirt" width="60" height="45">
+        <img src="https://cdn1.iconfinder.com/data/icons/fitness/500/Shoes_soccer_sport_fitness-512.png" alt="sneakers" width="60" height="45">
 
   </section>
   <section id="section-b">
@@ -25,22 +26,22 @@
       </section>
 <section id="section-c">
     <p>Group Classes</p><br>
-    <img src="https://images.assetsdelivery.com/compings_v2/bsd555/bsd5551603/bsd555160300070.jpg" alt="Flowers in Chania" width="80" height="80">
-    <img src="https://www.netclipart.com/pp/m/246-2460709_fruit-bowl-project-angel-heart-healthy-food-icon.png" alt="Flowers in Chania" width="60" height="45">
-    <img src="https://play-lh.googleusercontent.com/gEnz6YtDv9TZnl4CfZUHKbdFtZcih67K6MpYMT7MqIYOd6b6XMrDyDDY41ZvRoPYPmA" alt="Flowers in Chania" width="60" height="45">
+    <img src="https://images.assetsdelivery.com/compings_v2/bsd555/bsd5551603/bsd555160300070.jpg" alt="workout classes" width="80" height="80">
+    <img src="https://www.netclipart.com/pp/m/246-2460709_fruit-bowl-project-angel-heart-healthy-food-icon.png" alt="diet" width="60" height="45">
+    <img src="https://play-lh.googleusercontent.com/gEnz6YtDv9TZnl4CfZUHKbdFtZcih67K6MpYMT7MqIYOd6b6XMrDyDDY41ZvRoPYPmA" alt="yoga" width="60" height="45">
 
   </section>
   <section id="section-d">
     <p>Locations</p><br>
-        <img src="https://cdn4.iconfinder.com/data/icons/fitness-lino-color/100/fitness_gym_health-22-512.png" alt="Flowers in Chania" width="60" height="45">
+        <img src="https://cdn4.iconfinder.com/data/icons/fitness-lino-color/100/fitness_gym_health-22-512.png" alt="gym" width="60" height="45">
 
       </section>
       <section id="section-e">
     <p>Workout Categories For You</p><br>
-        <img src="https://www.flaticon.com/svg/static/icons/svg/1312/1312938.svg" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRmOaHHsPVm5tADDS_u-ywLJ0twLmU55XDVQ&usqp=CAU" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcm6ZIhsj-c3YLM0wWYaJxAzpjlk-lglCXVQ&usqp=CAU" alt="Flowers in Chania" width="60" height="45">
-        <img src="https://lh3.googleusercontent.com/proxy/ZezN50Ys3vthtwH-ullR7-D6O01cCBuFyh98s21cwolRHQRnvMy1eVF3-fiOrqqkGEfHW3L_fkZNZHAgYLkAyEe3IDVRoeJYVV5HuA" alt="Flowers in Chania" width="60" height="45">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/1312/1312938.svg" alt="treadmill" width="60" height="45">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRmOaHHsPVm5tADDS_u-ywLJ0twLmU55XDVQ&usqp=CAU" alt="dumbbell" width="60" height="45">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcm6ZIhsj-c3YLM0wWYaJxAzpjlk-lglCXVQ&usqp=CAU" alt="eliptical" width="60" height="45">
+        <img src="https://www.iconbunny.com/icons/media/catalog/product/2/0/2022.12-bicycle-icon-iconbunny.jpg" alt="bike" width="60" height="45">
 
   </section>
    
@@ -49,6 +50,8 @@
 </template>
 
 <script>
+import LoginBadge from "@/components/LoginBadge";
+
 export default {
   name: "Slider",
   data() {

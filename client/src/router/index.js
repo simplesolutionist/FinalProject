@@ -5,6 +5,8 @@ import session from '../models/session'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
 import Users from '../views/Users.vue'
+import Friends from '../views/Friends.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +32,11 @@ const routes = [
     name: 'Users',
     component: Users
   },
+  {
+    path: '/friends',
+    name: 'Friends',
+    component: Friends
+  },
  
   {
     path: '/about',
@@ -46,7 +53,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Exercises.vue'),
-    beforeEnter: checkSessionUser
   },
   {
     path: '/progress',
@@ -81,6 +87,7 @@ const router = new VueRouter({
 })
 
 export default router
+base: process.env.BASE_URL,
 
 function checkSessionUser (to, from, next) {
   if(session.user){
