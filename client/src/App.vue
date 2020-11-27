@@ -19,7 +19,7 @@ import Nav from "@/components/Nav";
 export default {
   components: {
    Nav,
-  }
+     }
 }
 </script>
 
@@ -27,5 +27,3 @@ export default {
   @import "./styles/style.scss";
 
 </style>
-
-
