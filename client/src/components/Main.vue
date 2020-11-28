@@ -73,7 +73,7 @@ export default {
     var inside = this;
 
     axios
-      .get("https://run.mocky.io/v3/db9d2fb1-7b94-4d05-aa8e-3cc399aab31a")
+      .get("https://run.mocky.io/v3/cc2e4a2f-8441-4382-abac-ff7e7691fd20")
       .then(function(response) {
         //console.log(response);
 
