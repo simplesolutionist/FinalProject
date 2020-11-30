@@ -68,7 +68,7 @@ export default {
     this.hover_flag = false;
     var inside = this;
     axios
-      .get("https://run.mocky.io/v3/cc2e4a2f-8441-4382-abac-ff7e7691fd20")
+      .get("https://localhost:3001/friends")
       .then(function(response) {
         //console.log(response);
         inside.wonders_data_actual = response.data.data;
@@ -165,9 +165,6 @@ export default {
   }
 };
 </script>
-
-
-
 
 <style scoped  lang="scss">
   @import "../styles/friends.scss";
