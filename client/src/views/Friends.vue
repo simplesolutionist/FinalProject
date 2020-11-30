@@ -2,18 +2,18 @@
   <div class="friends">
     <!-- <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Main/>
+    <Friends/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import Main from '@/components/Main.vue'
+import Friends from '@/components/Friends.vue'
 export default {
   name: 'friends',
   components: {
-    Main
+    Friends
   }
 }
 </script>

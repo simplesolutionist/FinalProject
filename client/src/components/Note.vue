@@ -213,9 +213,10 @@
   </div>
 </div>
 <br>
-<div class="field is-grouped">
- 
-</div>
+<div class="control">
+<button class="button is-primary" @click.prevent="signup">
+            Submit
+            </button>  </div>
 </form>
             </div>
               </div>

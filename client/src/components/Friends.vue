@@ -60,29 +60,21 @@
     </div>
   </div>
 </template>
-
 <script>
-
 import axios from "axios";
-
 export default {
-  name: "Main",
+  name: "Friends",
   mounted() {
     this.hover_flag = false;
-
     var inside = this;
-
     axios
       .get("https://run.mocky.io/v3/cc2e4a2f-8441-4382-abac-ff7e7691fd20")
       .then(function(response) {
         //console.log(response);
-
         inside.wonders_data_actual = response.data.data;
-
         response.data.data.map(function(wonder) {
           inside.likes.count += wonder.likes;
         });
-
         inside.wonders_data_actual = inside.wonders_data_actual.map(function(
           wonder
         ) {
@@ -178,5 +170,5 @@ export default {
 
 
 <style scoped  lang="scss">
-  @import "../styles/main.scss";
+  @import "../styles/friends.scss";
 </style>

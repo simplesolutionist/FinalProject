@@ -10,7 +10,7 @@
 <div class="field">
   <label class="label">Username</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+    <input class="input is-success" type="text" placeholder="Text input" value="">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -18,13 +18,12 @@
       <i class="fas fa-check"></i>
     </span>
   </div>
-  <p class="help is-success">This username is available</p>
 </div>
 
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+    <input class="input is-danger" type="email" placeholder="Email input" value="">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -32,10 +31,10 @@
       <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
-  <p class="help is-danger">This email is invalid</p>
 </div>
 
 <div class="field">
+    <label class="label">Password</label>
   <p class="control has-icons-left">
     <input class="input" type="password" placeholder="Password">
     <span class="icon is-small is-left">
@@ -58,23 +57,33 @@
 <button class="button is-success" @click.prevent="signup">
             Signup
             </button>  </div>
-  
+   <div class="control">
+    <router-link to="/login"  class="button is-link ">Already have an account?</router-link>
+  </div>
 </div>
 </form>
 </template>
 
 <script>
 import session from "@/models/session";
+import { signup } from "@/models/users";
+
 export default {
+   data: ()=>({
+    firstname: "",
+    lastname: "",
+    email: "",
+    username: "",
+    password: "",
+    error: ""
+  }),
     methods: {
         signup(){
             session.user = {
-                name: 'Ayman Ali',
-                handle: 'simplesolutionist',
-                profile: 'https://pbs.twimg.com/profile_images/1318718659808854018/DVBHPU4q_400x400.jpg'
+                name: 'User 5',
             }
             session.addNotification('Yay! You signed in', 'success')
-            this.$router.push('home')
+            this.$router.push('Home')
         }
     }
 }

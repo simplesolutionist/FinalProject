@@ -140,7 +140,6 @@ import session from "@/models/session";
             createCategory: async function() {
                 let formData = new FormData();
                 formData.append('name', this.categoryData.name);
-                formData.append('image', this.categoryData.image);
 
                 try {
                     const response = await categoryService.createCategory(formData);

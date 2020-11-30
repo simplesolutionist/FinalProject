@@ -3,13 +3,9 @@
 
         <div class="media" v-if="session.user">
         <div class="media-left">
-            <figure class="image">
-            <img :src="session.user.profile" alt="Placeholder image">
-            </figure>
         </div>
         <div class="media-content">
             <p class="has-text-weight-bold">{{session.user.name}}</p>
-            <p class="is-size-7">@{{session.user.handle}}</p>
         </div>
         </div>
 
