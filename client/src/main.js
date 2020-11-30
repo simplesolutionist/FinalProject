@@ -20,7 +20,6 @@ Vue.config.productionTip = false
 
 import 'buefy/dist/buefy.css'
 import '@fortawesome/fontawesome-free/css//all.css'
-import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 

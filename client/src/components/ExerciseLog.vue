@@ -1,16 +1,16 @@
 <template>
     <div class="list">
-    <button @click="addNote()" class="btn btn-info">+ Add Exercise to Log</button>
+    <button @click="addExercise()" class="btn btn-info">+ Add Exercise to Log</button>
 <br><br>
         <h3>Exercise Log</h3>
         <ul class="list-group">
             <li class="list-group-item"
-                v-for="(note, index) in notes"
-                :key="note.index"
-                :class="{ 'active': index === activeNote}"
-                @click="changeNote(index)"
+                v-for="(exercise, index) in exercises"
+                :key="exercise.index"
+                :class="{ 'active': index === activeExercise}"
+                @click="changeExercise(index)"
                 >
-                <div>{{ note.title }}</div>
+                <div>{{ exercise.title }}</div>
             </li>
         </ul>
     </div>
@@ -18,13 +18,13 @@
 <script>
 export default {
   name: "ExerciseLog",
-  props: ["notes", "activeNote"],
+  props: ["exercises", "activeExercise"],
   methods: {
-    changeNote(index) {
-      this.$emit("app-changeNote", index);
+    changeExercise(index) {
+      this.$emit("app-changeExercise", index);
     },
-    addNote() {
-      this.$emit("app-addNote");
+    addExercise() {
+      this.$emit("app-addExercise");
     },
   }
 };

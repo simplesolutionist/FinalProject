@@ -3,54 +3,39 @@ const
   mysql = require('../models/mysql')
 
 // GET Exercises
-app.post('/get-notes', (req, res) => {
-  mysql.query('SELECT * FROM notes ORDER BY id DESC')
+app.post('/get-exercises', (req, res) => {
+  mysql.query('SELECT * FROM Exercises ORDER BY id DESC')
     .then(s => res.json(s))
     .catch(e => console.log(e))
 })
 
 // CREATE AN Exercise
-app.post('/create-note', (req, res) => {
+app.post('/create-exercise', (req, res) => {
   let { title, content } = req.body
   let insert = {
     title,
     content,
     time: new Date().getTime()
   }
-  mysql.query('INSERT INTO notes SET ?', insert)
+  mysql.query('INSERT INTO Exercises SET ?', insert)
     .then(s => res.json(Object.assign({}, insert, { id: s.insertId })) )
     .catch(e => console.log(e) )
 })
 
-// GET Exercise DETAILS
-app.post('/note-details', (req, res) => {
-  let { id } = req.body
-  mysql.query('SELECT * FROM notes WHERE id=?', [ id ])
-    .then(s => res.json(s[0]) )
-    .catch(e => console.log(e) )
-})
-
 // DELETE Exercise
-app.post('/delete-note', (req, res) => {
+app.post('/delete-exercise', (req, res) => {
   let { id } = req.body
-  mysql.query('DELETE FROM notes WHERE id=?', [ id ])
-    .then(() => res.json({ mssg: 'Note deleted!!' }) )
+  mysql.query('DELETE FROM Exercises WHERE id=?', [ id ])
+    .then(() => res.json({ mssg: 'Exercise deleted!!' }) )
     .catch(e => console.log(e) )
 })
 
 // EDIT Exercise
-app.post('/edit-note', (req, res) => {
+app.post('/edit-exercise', (req, res) => {
   let { id, title, content } = req.body
-  mysqlquery('UPDATE notes SET title=?, content=? WHERE id=?', [ title, content, id ])
+  mysqlquery('UPDATE Exercises SET title=?, content=? WHERE id=?', [ title, content, id ])
     .then(s => res.json(s) )
     .catch(e => console.log(e) )
-})
-
-// INVALID Exercise CHECKING
-app.post('/valid-note', (req, res) => {
-  mysql.query('SELECT COUNT(id) AS count FROM notes WHERE id=? LIMIT 1', [ req.body.id ])
-    .then(is => res.json(is[0].count == 1 ? true : false) )
-    .catch(err => console.log(err) )
 })
 
 module.exports = app

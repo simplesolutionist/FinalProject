@@ -9,7 +9,7 @@ async function getAll(){
 }
 
 async function getForExercise(exercise_id){
-    const sql = `SELECT P.*, FirstName, LastName FROM Reactions P Join Users U ON P.Owner_id = U.id WHERE P.Post_id = ?`
+    const sql = `SELECT P.*, FirstName, LastName FROM Reactions P Join Users U ON P.Owner_id = U.id WHERE P.Exercise_id = ?`
     return await mysql.query(sql, [exercise_id]);
 }
 

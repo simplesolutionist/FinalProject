@@ -1,11 +1,11 @@
 <template>
-   <div class="note">
+   <div class="exercise">
         <div v-if="note">
-         <button class="btn btn-danger" @click="removeNote()">Delete Log</button>
+         <button class="btn btn-danger" @click="removeExercise()">Delete Log</button>
             <br><br>
             <h3>Exercise Title</h3>
             <div class="form-group">
-                <input class="form-control" type="text" v-model="note.title" placeholder="Title" />
+                <input class="form-control" type="text" v-model="exercise.title" placeholder="Title" />
  <form>
   <v-row justify="center">
     <v-dialog
@@ -232,10 +232,10 @@
 <script>
 export default {
   name: "Note",
-  props: ["note"],
+  props: ["exercise"],
   methods: {
-    removeNote() {
-      this.$emit("app-removeNote");
+    removeExercise() {
+      this.$emit("app-removeExercise");
     }
   }
 };

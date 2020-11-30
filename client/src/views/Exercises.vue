@@ -6,15 +6,15 @@
         <div class="row">
             <div>
                 <ExerciseLog 
-                  @app-addNote="addNote"
-                  @app-changeNote="changeNote"
-                  :notes="notes"
-                  :activeNote="index" />
+                  @app-addExercise="addExercise"
+                  @app-changeExercise="changeExercise"
+                  :exercises="exercises"
+                  :activeExercise="index" />
             </div>
             <div>
                 <Note
-                  @app-removeNote="removeNote"
-                  :note="notes[index]" />
+                  @app-removeExercise="removeExercise"
+                  :exercise="exercises[index]" />
             </div>
         </div>
     </div>
@@ -31,22 +31,22 @@ export default {
     Note
   },
   data: () => ({
-    notes: [],
+    exercises: [],
     index: 0
   }),
   methods: {
-    addNote() {
-      this.notes.push({
+    addExercise() {
+      this.exercises.push({
         title: "",
         content: ""
       });
-      this.index = this.notes.length - 1;
+      this.index = this.exercises.length - 1;
     },
-    changeNote(index) {
+    changeExercise(index) {
       this.index = index;
     },
-    removeNote() {
-      this.notes.splice(this.index, 1);
+    removeExercise() {
+      this.exercises.splice(this.index, 1);
       this.index = this.index === 0 ? 0 : this.index - 1;
     }
   }
