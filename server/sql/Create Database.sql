@@ -114,6 +114,17 @@ INSERT INTO `Exercise` (`id`, `created_at`, `update_at`, `exercise_type`, `exerc
 
 -- --------------------------------------------------------
 
+-- Table `Friends`
+CREATE TABLE `Friends` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created_at` DATETIME NOT NULL,
+  `update_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Friends_id` INT NOT NULL,
+  `Owner_id` INT NOT NULL,
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -----------------------------------------------------
+
 --
 -- Table structure for table `FriendRequests`
 --
