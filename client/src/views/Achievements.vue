@@ -1,6 +1,17 @@
 <template>
 <form> 
-  <br>
+  <center><b-field label="Find a User">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="filteredDataArray"
+                placeholder="e.g. Ayman"
+                icon="magnify"
+                clearable
+                @select="option => selected = option">
+                <template slot="empty">No results found</template>
+            </b-autocomplete></center>
+  <br><br>
   <table class="table is-narrow is-hoverable is-fullwidth">
             <thead><tr>
                 <th><strong>User#</strong></th>
@@ -51,21 +62,37 @@
 </form>
 </template>
 <script>
-import axios from "axios";
+//import axios from "axios";
+import users from "../models/users.js";
 export default {
    data() {
     return {
       users: [],
+      name: '',
+      selected: null
     };
   },
   methods: {
-    getUsers() {
-      axios
-        .get("localhost:3001/users/")
-        .then(response => (this.users = response.data))
-        .catch(error => console.log(error.message));
+   // getUsers() {
+   //   axios
+   //     .get("localhost:3001/users/")
+   //     .then(response => (this.users = response.data))
+   //     .catch(error => console.log(error.message));
+ // },
+  userSearched(users) {
+      console.log(`User Searched:\n id: ${user.id}\n 'name: ${user.name}`);
+    },
   },
-  }
+   computed: {
+            filteredDataArray() {
+                return this.data.filter((option) => {
+                    return option
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                })
+            }
+        }
 }
 </script>
 <style>

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+import Buefy from './Buefy'
 
 export const bus = new Vue()
 
@@ -13,6 +13,7 @@ import StarRating from 'vue-star-rating'
 import BootstrapVue from 'bootstrap-vue'
 
 Vue.component('star-rating', StarRating);
+Vue.use(Buefy);
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
